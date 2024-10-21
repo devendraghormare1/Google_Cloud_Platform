@@ -1,0 +1,32 @@
+
+
+Step 1: Create Cloud Storage Buckets
+        Create Two Buckets:
+            Input Bucket (Landing Zone): This bucket will store the input CSV files.
+            Processing Bucket: This bucket will be used for uploading the JavaScript (JS) and JSON files needed for the function, as well as for storing metadata and temporary files.
+
+        Upload Files:
+            Upload the necessary JS and JSON files to the Processing Bucket.
+
+Step 2: Set Up BigQuery
+        Create a BigQuery Dataset:
+            Set up a dataset in BigQuery to store your tables.
+
+        Create a Table:
+            Within the dataset, create a table to store the processed data from the input CSV files.
+
+Step 3: Automate the Data Pipeline with Dataflow
+        Create a Dataflow Job:
+            Set up a Dataflow job that automates the processing of data.
+            Configure the Dataflow job to be triggered whenever a new file is uploaded to the Input Bucket.
+
+        Specify File Path:
+            Ensure the Dataflow job can access the file path of the uploaded CSV files in the Input Bucket.
+
+Step 4: Create a Cloud Function to Trigger Dataflow
+        Develop Cloud Function:
+            Create a Cloud Function that will trigger the Dataflow job.
+            This function should be configured to respond to events from the Input Bucket (e.g., file upload events).
+        
+        Integrate Cloud Function with Dataflow:
+            In the Cloud Function, include logic to invoke the Dataflow job with the appropriate parameters and file paths.

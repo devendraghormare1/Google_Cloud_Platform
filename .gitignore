@@ -1,0 +1,16 @@
+# Ignore .env file containing environment variables
+.env
+
+# Ignore GCP service account key file
+key.json
+
+# Optionally, ignore other files and folders
+*.pyc
+__pycache__/
+.idea/
+.vscode/
+.DS_Store
+*.log
+
+
+gcp_env/
