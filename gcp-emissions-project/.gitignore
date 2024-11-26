@@ -1,0 +1,13 @@
+# Ignore environment and credentials files
+.env/
+key.json
+
+# Ignore temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.log
+
+# Ignore data files
+raw_data/
+processed_data/
